@@ -225,7 +225,7 @@ export default function Home() {
         
         {activeTab === 'manual' && (
           <form>
-            <div className="mb-4">
+            <div className="mb-4 text-gray-700">
               <label className="block text-gray-700">Struct Name:</label>
               <input
                 type="text"
@@ -235,7 +235,7 @@ export default function Home() {
               />
             </div>
             {variables.map((variable, index) => (
-              <div key={index} className="mb-4">
+              <div key={index} className="mb-4 text-gray-800">
                 <input
                   type="text"
                   placeholder="Variable Name"
@@ -267,7 +267,7 @@ export default function Home() {
                 <button type="button" onClick={() => handleRemoveVariable(index)} className="ml-2 px-2 py-1 bg-red-500 text-white rounded">Remove</button>
               </div>
             ))}
-            <div className="mb-4">
+            <div className="mb-4 text-gray-600">
               <label className="block text-gray-700">Domain Data:</label>
               <input
                 type="text"
@@ -306,7 +306,7 @@ export default function Home() {
         )}
         
         {output.length > 0 && (
-          <div className="mt-4 p-4 bg-gray-100 rounded">
+          <div className="mt-4 p-4 bg-gray-100 rounded text-gray-600">
             <h2 className="text-gray-700 font-bold">Output:</h2>
             <pre className="break-words whitespace-pre-wrap">{JSON.stringify(output)}</pre>
           </div>
